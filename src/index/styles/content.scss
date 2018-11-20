@@ -1,0 +1,443 @@
+@import './mixins';
+@import './variables.scss';
+
+.global-content {
+    max-width: 970px;
+    display: inline-block;
+    text-align: left;
+    margin: 0 10px;
+    @include tablet {
+        max-width: 768px;
+    }
+    @include mobile {
+        max-width: 600px;
+        margin: 0 15px;
+    }
+}
+
+// ICONS SECTION
+
+.section-top {
+    margin-top: 83px;
+    @include tablet {
+        margin-top: 30px;
+    }
+    @include mobile {
+        margin-top: 20px;
+    }
+}
+
+.section-title {
+    @include title-basic-settings;
+    margin-bottom: 40px;
+    @include tablet {
+        margin-bottom: 30px;
+        font-size: $title-tablet-font-size;
+    }
+    @include mobile {
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+    }
+}
+
+.section-text {
+   @include text-basic-settings;
+    width: 100%;
+    margin-bottom: 68px;
+    @include tablet {
+        font-size: $text-tablet-font-size;
+        margin-bottom: 30px;
+    }
+    @include mobile {
+        margin-bottom: 20px;
+        line-height: $mobile-line-height;
+    }
+}
+
+.section-text__link {
+    color: $secondary-color;
+    font-size: $text-font-size;
+    font-weight: 600;
+    line-height: $often-line-height;
+    cursor: pointer;
+    @include mobile {
+        line-height: $mobile-line-height;
+    }
+}
+
+.section-text__link:hover {
+    border-bottom: 4px solid $secondary-color;
+    color: $title-color;
+    transition: all 900ms;
+    @include tablet {
+        border-bottom: 3px solid $secondary-color;
+    }
+    @include mobile {
+        border-bottom: 3px solid $secondary-color;
+    }
+}
+
+.section-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 168px;
+    margin-bottom: 75px;
+    @include tablet {
+        margin-bottom: 30px;
+    }
+    @include mobile {
+        min-height: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+.card-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $main-background-color;
+    @include mobile {
+        flex-basis: 35%;
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+}
+
+.card-block__icon {
+    width: 109px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 21px;
+    @include tablet {
+        margin-bottom: 10px;
+    }
+    @include mobile {
+        margin-bottom: 5px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.card-block__icon_trips {
+    background-image: url(./assets/icon-trips.png);  
+    @include mobile {
+        background-image: url(./assets/Screenshot_1.png);
+    }
+}
+
+.card-block__icon_venues {
+    background-image: url(./assets/icon-venues.png);
+    @include mobile {
+        background-image: url(./assets/Screenshot_2.png);
+    }
+}
+
+.card-block__icon_tickets {
+    background-image: url(./assets/icon-tickets.png);
+    @include mobile {
+        background-image: url(./assets/Screenshot_3.png);
+    }
+}
+
+.card-block__icon_reviews {
+    background-image: url(./assets/icon-reviews.png);
+    @include mobile {
+        background-image: url(./assets/Screenshot_4.png);
+    }
+}
+
+.card-block__info {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.36;
+    color: $title-color;
+    @include tablet {
+        font-size: 1.2rem;
+    }
+    @include mobile {
+        font-size: $text-font-size;
+    }
+}
+
+.card-block__type {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #909090;
+    @include mobile {
+        font-size: 0.7rem;
+    }
+}
+
+.type-line {
+    border: none;
+    width: 100%;
+    height: 1px;
+    opacity: 0.5;
+    background-color: $line-color;
+    margin: 0;
+}
+
+// MIDDLE SECTION
+
+.section-middle {
+    margin-top: 80px;
+    @include tablet {
+        margin-top: 30px;
+    }
+    @include mobile {
+        margin-top: 20px;
+    }
+}
+
+// WRAPPER 1 
+
+.section-wrapper_first {
+    width: 100%;
+    min-height: 428px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 101px;
+    @include tablet {
+        min-height: 375px;
+        margin-bottom: 30px;
+    }
+    @include mobile {
+        min-height: 350px;
+        margin-bottom: 30px;
+    }
+}
+
+.section-info { 
+    border: 0 transparent;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+    background-color: $main-background-color;
+    height: 67%;
+    width: 48.45%;
+    padding: 40px;
+    @include tablet {
+        width: 60%;
+        height: 67.4667%;
+    }
+    @include mobile {
+        padding: 20px;
+        height: 72%;
+        width: 62%;
+    }
+}
+
+.section-info_left {
+    position: absolute;  
+    align-self: flex-start;
+    top: 16.5%;
+    left: 0%;
+    @include tablet {
+        top: 16.27%;
+    }
+    @include mobile {
+        top: 14%;
+    }
+}
+
+.section-info__title {
+    font-size: 1.5rem;
+    font-family: 'Georgia';
+    color: $title-color;
+    margin: 0;
+    line-height: 1.04;
+    @include tablet {
+        margin-bottom: 8px;
+        font-size: 1.3rem;
+    }
+    @include mobile {
+        margin-top: 5px;
+        font-size: 1.2rem;
+    }
+}
+
+.section-info__text {
+   @include text-basic-settings;
+    font-family: 'Avenir Next Cyr';
+    @include tablet {
+        font-size: 0.9rem;
+        margin: 0 auto;
+    }
+}
+
+.section-info__angle-top_left {
+    @include angle-basic-settings; 
+    border-top: 2px solid $secondary-color;
+    border-left: 2px solid $secondary-color;
+    align-self: flex-start;
+    top: 19px;
+    left: 19px;
+    @include mobile {
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        left: 10px;
+    }
+
+}
+
+.section-info__angle-bottom_right {
+    @include angle-basic-settings;
+    border-bottom: 2px solid $secondary-color;
+    border-right: 2px solid $secondary-color;
+    align-self: flex-end;
+    bottom: 19px;
+    right: 19px;
+    @include mobile {
+        width: 20px;
+        height: 20px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+.section-image {
+    @include image-basic-settings;
+    width: 58.76%;
+    max-height: 100%;
+    background-image: url(./assets/photo_4@3x.png);
+    @include tablet {
+        width: 65%;
+    }
+    @include mobile {
+        width: 80%;
+    }
+}
+
+// WRAPPER 2
+
+.section-wrapper_second {
+    width: 100%;
+    min-height: 428px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 121.8px;
+    @include tablet {
+        min-height: 375px;
+        margin-bottom: 30px;
+    }
+    @include mobile {
+        min-height: 350px;
+        margin-bottom: 30px;
+    }
+}
+
+.section-picture {
+    @include image-basic-settings;
+    width: 58.76%;
+    max-height: 100%;
+    background-image: url(./assets/photo@3x.png);
+    @include tablet {
+        width: 65%;
+    }
+    @include mobile {
+        width: 80%;
+        background-size: auto;
+    }
+}
+
+.section-info_right {
+    position: absolute;  
+    align-self: flex-end;
+    top: 16.5%;
+    right: 0%; 
+    @include tablet {
+        top: 16.27%;
+    }
+    @include mobile {
+        top: 14%;
+    }
+}
+
+.section-info__angle-top_right {
+    @include angle-basic-settings;
+    align-self: flex-end;
+    border-top: 2px solid $secondary-color;
+    border-right: 2px solid $secondary-color;  
+    top: 19px;
+    right: 19px;
+    @include mobile {
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.section-info__angle-bottom_left {
+    @include angle-basic-settings;
+    align-self: flex-start;
+    border-bottom: 2px solid $secondary-color;
+    border-left: 2px solid $secondary-color;
+    bottom: 19px;
+    left: 19px;
+    @include mobile {
+        bottom: 10px;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+// BOTTOM SECTION
+
+.section-bottom {
+    margin-top: 80px;
+    @include tablet {
+        margin-top: 30px;
+    }
+    @include mobile {
+        margin-top: 20px;
+    }
+
+}
+
+.section-bottom__title {
+    @include title-basic-settings;
+    @include tablet {
+        font-size: $title-tablet-font-size;
+    }
+    @include mobile {
+        font-size: 1.3rem;
+    }
+}
+
+.section-bottom__text {
+    @include text-basic-settings;
+    width: 100%;
+    margin-top: 42px;
+    margin-bottom: 48px;
+    @include tablet {
+        font-size: $text-tablet-font-size;
+        margin-top: 21px;
+        margin-bottom: 24px;
+    }
+    @include mobile {
+        margin-top: 21px;
+        margin-bottom: 24px;
+        line-height: $mobile-line-height;
+    }
+}
+
+.section-bottom__line {
+    width: 270px;
+    height: 1px;
+    opacity: 0.5;
+    background-color: $line-color;
+    margin: 0 auto;
+}
+
+
+
+

@@ -1,0 +1,171 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+@mixin carusel-foto-basic {
+    display: block;
+    overflow: hidden;
+    outline: none;
+}
+
+.carusel {
+    width: 100%;
+    margin-top: 56px;
+    margin-bottom: 80px;
+    @include mobile {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+}
+
+.carusel-wrapper {
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+    @include mobile {
+        height: 64vw;
+    }
+}
+
+.carusel-wrapper__item {
+    @include carusel-foto-basic;
+    @include image-basic-settings;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.carusel-foto__0 {
+    width: 33.33vw;
+    height: 21.88vw;
+    top: 50%;
+    left: 17.5%;
+    z-index: 1;
+    @include mobile {
+        width: 94.4vw;
+        height: 70.8vw;
+    }
+}
+
+.carusel-foto__1 {
+    width: 38.88vw;
+    height: 29.17vw;
+    top: 50%;
+    left: 31.5%;
+    z-index: 2;
+    @include mobile {
+        width: 94.4vw;
+        height: 70.8vw;
+        z-index: 1;
+    }
+}
+
+.carusel-foto__2 {
+    width: 44.44vw;
+    height: 33.33vw;
+    border: none;
+    box-shadow: none;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    @include mobile {
+        width: 80vw;
+        height: 70.8vw;
+    }
+}
+
+.carusel-foto__3 {
+    width: 38.88vw;
+    height: 29.17vw;
+    top: 50%;
+    left: 68.5%;
+    z-index: 2;
+    @include mobile {
+        width: 94.4vw;
+        height: 70.8vw;
+        z-index: 1;
+    }
+}
+
+.carusel-foto__4 {
+    width: 33.33vw;
+    height: 21.88vw;
+    top: 50%;
+    left: 82.5%;
+    z-index: 1;
+    @include mobile {
+        width: 94.4vw;
+        height: 70.8vw;
+    }  
+}
+
+.carusel-foto__city {
+    background-image: url(./assets/photo_2@2x.png);
+    @include mobile {
+        background-image: url(./assets/photo_2.png);
+    }
+}
+
+.carusel-foto__lake {
+    background-image: url(./assets/photo_3@2x.png);
+    @include mobile {
+        background-image: url(./assets/photo_3.png);
+    }
+}
+
+.carusel-foto__street {
+    background-image: url(./assets/photo-front@2x.png);
+    @include mobile {
+        background-image: url(./assets/photo-front.png);
+    }
+}
+
+.carusel-foto__sea {
+    background-image: url(./assets/photo@2x.png);
+    @include mobile {
+        background-image: url(./assets/photo.png);
+    }
+}
+
+.carusel-foto__road {
+    background-image: url(./assets/photo_4@2x.png);
+    @include mobile {
+        background-image: url(./assets/photo_4.png);
+    }
+}
+
+.carusel-btn__left {
+    @include btn-carusel;
+    position: absolute;
+    top: 50%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    @include mobile {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.fa-arrow-left {
+    color: #fafafa;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.carusel-btn__right {
+    @include btn-carusel;
+    position: absolute;
+    top: 50%;
+    left: 71%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    @include mobile {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.fa-arrow-right {
+    color: #fafafa;
+    font-size: 1rem;
+    text-align: center;
+}

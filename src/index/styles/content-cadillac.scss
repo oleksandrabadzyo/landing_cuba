@@ -1,0 +1,285 @@
+@import './mixins';
+@import './variables.scss';
+
+.wrapper-title {
+    @include title-basic-settings;
+    @include tablet {
+        font-size: $title-tablet-font-size;
+    }
+    @include mobile {
+        font-size: 1.4rem;
+    }
+}
+
+.wrapper-values {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    &__dot {
+        width: 26px;
+        height: 23px;
+        background-image: url(./assets/hover.png);
+        @include image-basic-settings;
+        margin-right: 2px;
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+    &__title {
+        font-size: $text-font-size;
+        font-weight: 600;
+        line-height: $often-line-height;
+        color: $secondary-color;
+        padding: 1px;
+        @include mobile {
+            line-height: $mobile-line-height;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.image-block {
+    position: relative;
+    left: -100px;
+    margin-top: 80px;
+    @include laptop {
+        left: 0;
+    }
+    @include tablet {
+        left: -62px;
+    }
+    @include mobile {
+        left: -45px;
+    }
+}
+
+.main-image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-image: url(./assets/cadillac@3x.png);
+    width: 100vw;
+    height: calc(100vw / 3.5454);
+    max-width: 1170px;
+    max-height: 330px;
+    text-align: center;
+    &__dot {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 11px solid $secondary-color;
+        opacity: 0.75;
+        background-color: #ffd600;
+        position: relative;
+    }
+    @include laptop {
+        max-width: 970px;
+        max-height: 273px;
+    }
+    @include tablet {
+        background-image: url(./assets/cadillac.png);
+        width: 90vw;
+        height: calc(90vw / 3.5454);
+        max-width: 992px;
+        max-height: 280px;
+    }
+    @include mobile {
+        background-image: url(./assets/cadillac.png);
+        width: 90vw;
+        height: calc(90vw / 3.5454);
+        max-width: 768px;
+        max-height: 217px;
+    }
+}
+
+#car-dot_1 {
+    left: 12.70%;
+    bottom: -36%;
+    @include mobile {
+        left: 13%;
+        bottom: -30%;
+    }
+}
+
+#car-dot_1 .image-tooltip {
+    visibility: hidden;
+}
+
+#car-dot_1:hover .image-tooltip {
+    visibility: visible;
+}
+
+#car-dot_2 {
+    left: 42.50%;
+    bottom: -25%;
+    @include mobile {
+        left: 43%;
+        bottom: -13%;
+    }
+}
+
+#car-dot_2 .image-tooltip {
+    visibility: hidden;
+}
+
+#car-dot_2:hover .image-tooltip {
+    visibility: visible;
+}
+
+#car-dot_3 {
+    left: 65.47%;
+    bottom: -3%;
+    @include tablet {
+        bottom: 3%;
+    }
+    @include mobile {
+        left: 65%;
+        bottom: 15%;
+    }
+}
+
+#car-dot_3 .image-tooltip {
+    visibility: hidden;
+}
+
+#car-dot_3:hover .image-tooltip {
+    visibility: visible;
+}
+
+#car-dot_4 {
+    left: 71.7%;
+    bottom: -55%;
+    @include tablet {
+        bottom: -50%;
+    }
+    @include mobile {
+        left: 71%;
+        bottom: -35%;
+    }
+}
+
+#car-dot_4 .image-tooltip {
+    visibility: hidden;
+}
+
+#car-dot_4:hover .image-tooltip {
+    visibility: visible;
+}
+
+.image-tooltip {
+    position: absolute;
+    top: -150px;
+    left: 70px;
+    &__text {
+        font-size: $text-font-size;
+        font-weight: bold;
+        line-height: $often-line-height;
+        color: $text-color;
+        transform: translate(50%);
+        margin-bottom: 7.5px;
+        text-align: center;
+        @include mobile {
+            line-height: $mobile-line-height;
+        }
+    }
+    &__line {
+        height: 122px;
+        width: 122px;
+        border-top: 2px solid $secondary-color;
+        border-left: 2px solid $secondary-color;
+        -moz-transform: skew(-45deg);
+        -webkit-transform: skew(-45deg);
+        transform: skew(-45deg);
+        @include mobile {
+            height: 80px;
+            width: 80px;
+            -moz-transform: skew(-30deg);
+            -webkit-transform: skew(-30deg);
+            transform: skew(-30deg);
+        }
+    }
+    @include mobile {
+        top: -120px;
+        left: 25px;
+    }
+
+}
+
+.image-tooltip_left {
+    left: -170px;
+    @include mobile {
+        left: -100px;
+    }
+}
+
+.image-tooltip__line_left {
+    border-top: 2px solid $secondary-color;
+    border-left: none;
+    border-right: 2px solid $secondary-color;
+    -moz-transform: skew(45deg);
+    -webkit-transform: skew(45deg);
+    transform: skew(45deg);
+    @include mobile {
+        -moz-transform: skew(30deg);
+        -webkit-transform: skew(30deg);
+        transform: skew(30deg);
+    }
+}
+
+.image-tooltip__text_left {
+    transform: translate(-50%);
+}
+
+.image-block__ground {
+    border-radius: 1100px/10px;
+    opacity: 0.5;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    background-color: #212020;
+    width: 100vw;
+    height: calc(100vw / 167.1428);
+    max-width: 1170px;
+    max-height: 7px;
+    text-align: center;
+    @include laptop {
+        max-width: 100%;
+        max-height: 6px;
+    }
+    @include tablet {
+        width: 90vw;
+        max-width: 992px;
+        height: calc(90vw / 167.1428);
+        max-height: 7px;
+    }
+    @include mobile {
+        width: 90vw;
+        max-width: 768px;
+        height: calc(90vw / 167.1428);
+        max-height: 5px;
+    }
+}
+
+.wrapper-image__text {
+    margin-top: 54px;
+    margin-bottom: 80px;
+    font-size: $text-font-size;
+    line-height: $often-line-height;
+    color: $text-color;
+    width: 100%;
+    @include tablet {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        line-height: $mobile-line-height;
+    }
+    @include mobile {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: $mobile-line-height;
+    }
+}

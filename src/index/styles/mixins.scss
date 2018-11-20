@@ -1,0 +1,78 @@
+@import './variables';
+
+$lg-screen: 1440px;
+$md-screen: 992px;
+$sm-screen: 768px;
+
+@mixin desktop {
+  @media (min-width: #{$lg-screen}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: #{$lg-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$md-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$sm-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin title-basic-settings {
+  font-size: $title-font-size;
+  text-align: center;
+  color: $title-color;
+  font-family: 'Georgia';
+  line-height: $secondary-line-height;
+}
+
+@mixin text-basic-settings {
+  font-size: $text-font-size;
+  line-height: $often-line-height;
+  color: $text-color;
+}
+
+@mixin image-basic-settings {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin angle-basic-settings {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: transparent;
+}
+
+@mixin btn-carusel {
+  width: 40px;
+  height: 40px;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  outline: none;
+}
+
+@mixin footer-icon-basic {
+  display: inline-block;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+

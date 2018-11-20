@@ -1,0 +1,54 @@
+@import './styles/header.scss';
+@import './styles/header-navbar.scss';
+@import './styles/content.scss';
+@import './styles/content-cadillac.scss';
+@import './styles/karusel.scss';
+@import './styles/footer.scss';
+
+@import './styles/mixins.scss';
+@import './styles/variables';
+
+@import './styles/fonts/stylesheet.css';
+@import './styles/vendor/jquery-ui.css';
+
+
+// @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://use.fontawesome.com/releases/v5.4.1/css/all.css');
+
+
+* {
+	box-sizing: border-box;
+	&:active, &:hover, &:focus {
+		outline: 0;
+	}
+}
+  
+html {
+	// width: 100%;
+	// height: 100%;
+	font-family: 'Avenir Next Cyr';
+	font-size: 16px;
+}
+
+body {
+	// width: 100%;
+	// height: 100%;
+	padding: 0;
+	margin: 0;
+	// background-color: lightblue;
+	background-color: $main-background-color;
+	text-align: center;
+}
+
+body, h1, h2, h3, h4, ul, ol, figure {
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
